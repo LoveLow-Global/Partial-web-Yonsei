@@ -1,6 +1,3 @@
-using Pkg
-Pkg.activate("C:\\Users\\WINDOWS11\\Desktop\\2024-2\\CTM3020")
-
 # Calling Packages
 using Graphs
 using GraphRecipes  # For graph plotting
@@ -9,10 +6,8 @@ using DataFrames
 using StatsBase
 using CSV
 
-##### CSV - Original Network ##### 
-
 # Read CSV file
-file_path = "C:\\Users\\WINDOWS11\\Desktop\\2024-2\\CTM3020\\Research\\web-Yonsei\\web_yonsei_72h_id.csv"
+file_path = "YOUR FILE PATH FOR THE CSV FILE"
 
 # Data, Number of Links
 data = CSV.read(file_path, DataFrame)
@@ -84,8 +79,6 @@ ba_in_frequencies_filtered = ba_in_frequencies[valid_in_indices]
 ba_out_degrees_filtered = ba_out_degrees[valid_out_indices]
 ba_out_frequencies_filtered = ba_out_frequencies[valid_out_indices]
 
-##### Plotting Degree Distributions ##### 
-
 # Scatter plot for NotreDame in-degree distribution
 scatter(
     in_degrees,
@@ -127,7 +120,6 @@ scatter(
     xscale = :log10,
     yscale = :log10,
 )
-
 
 # Scatter plot for BA out-degree distribution
 scatter!(
