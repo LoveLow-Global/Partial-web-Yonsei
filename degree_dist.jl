@@ -5,7 +5,7 @@ using CSV # For reading CSV files
 using DataFrames # DataFrames
 using StatsBase
 
-file_path = "C:\\Users\\WINDOWS11\\Desktop\\2024-2\\CTM3020\\Research\\web-Yonsei\\web_yonsei_72h_id.csv"
+file_path = "YOUR FILE PATH FOR THE CSV FILE"
 
 # Data
 data = CSV.read(file_path, DataFrame)
