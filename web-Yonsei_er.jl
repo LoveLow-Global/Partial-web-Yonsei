@@ -1,6 +1,6 @@
 # Calling Packages
 using Graphs
-using GraphRecipes  # For graph plotting
+using GraphRecipes
 using Plots # For plotting
 using DataFrames
 using StatsBase
