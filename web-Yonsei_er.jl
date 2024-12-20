@@ -1,6 +1,3 @@
-using Pkg
-Pkg.activate("C:\\Users\\WINDOWS11\\Desktop\\2024-2\\CTM3020")
-
 # Calling Packages
 using Graphs
 using GraphRecipes  # For graph plotting
@@ -9,10 +6,8 @@ using DataFrames
 using StatsBase
 using CSV
 
-##### CSV - Original Network ##### 
-
 # Read CSV file
-file_path = "C:\\Users\\WINDOWS11\\Desktop\\2024-2\\CTM3020\\Research\\web-Yonsei\\web_yonsei_72h_id.csv"
+file_path = "YOUR FILE PATH FOR THE CSV FILE"
 
 # Data, Number of Links
 data = CSV.read(file_path, DataFrame)
@@ -32,8 +27,6 @@ out_degree_values = collect(values(out_degree_counts))
 out_degree_hist = countmap(out_degree_values)
 out_degrees = collect(keys(out_degree_hist))
 out_frequencies = collect(values(out_degree_hist))
-
-##### ER Network Generation and Plotting ##### 
 
 # Set parameters for ER network
 n = 760260  # Number of nodes
@@ -82,8 +75,6 @@ er_in_frequencies_filtered = er_in_frequencies[valid_in_indices]
 
 er_out_degrees_filtered = er_out_degrees[valid_out_indices]
 er_out_frequencies_filtered = er_out_frequencies[valid_out_indices]
-
-##### Plotting Degree Distributions ##### 
 
 # Scatter plot for original in-degree distribution
 scatter(
