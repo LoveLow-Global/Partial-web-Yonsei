@@ -1,16 +1,13 @@
-using Pkg
-Pkg.activate("C:\\Users\\WINDOWS11\\Desktop\\2024-2\\CTM3020")
-
 # Calling Packages
 using Graphs
-using GraphRecipes  # For graph plotting
+using GraphRecipes
 using Plots # For plotting
 using DataFrames
 using StatsBase
 using CSV
 using LinearAlgebra
 
-file_path = "C:\\Users\\WINDOWS11\\Desktop\\2024-2\\CTM3020\\Research\\web-Yonsei\\web_yonsei_72h_id.csv"
+file_path = "YOUR FILE PATH FOR THE CSV FILE"
 
 # Data, Number of Links
 data = CSV.read(file_path, DataFrame)
